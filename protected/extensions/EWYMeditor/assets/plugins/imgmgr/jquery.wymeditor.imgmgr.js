@@ -1,0 +1,1 @@
+// dialog scripts moved to wymeditor core file

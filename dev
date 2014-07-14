@@ -1,0 +1,32 @@
+#!/bin/bash
+
+
+PORT_IS_FREE=$(netstat -an | grep :80\  | grep LISTEN | wc -l)
+if [[ $PORT_IS_FREE > 0 ]]; then
+  echo "Something is already setup on port 80"
+  exit 1;
+fi
+
+
+WHOAMI=$(whoami)
+if [[ $WHOAMI == 'root' ]]; then
+  echo 'You must not run me as root or sudo';
+  exit 1;
+fi
+
+
+REPLICATOR_RUNNING=$(ps aux | grep http-replicator | grep -v grep | wc -l)
+if [[ $REPLICATOR_RUNNING == 0 ]]; then
+  REPLICATOR_INSTALLED=$(ls -al /opt/http-replicator | wc -l)
+  if [[ $REPLICATOR_INSTALLED == 0 ]]; then
+    wget -O r.zip --no-check-certificate https://github.com/gertjanvanzwieten/replicator/archive/master.zip && \
+    unzip r.zip && \
+    rm r.zip && \
+    sudo mv replicator-master /opt/http-replicator && \
+    sudo ln -s /opt/http-replicator/http-replicator /usr/sbin/http-replicator && \
+    sudo mkdir /var/log/vagrant-apt-cache
+  fi
+  sudo http-replicator -r /var/log/vagrant-apt-cache -p 8089 --daemon /var/log/vagrant-apt-cache/replicator.log --static
+fi
+
+vagrant up

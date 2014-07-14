@@ -1,0 +1,29 @@
+
+#server-image-output { height: 210px; overflow: auto; }
+#server-image-output table { border-collapse: collapse; }
+#server-image-output thead td { font-style: italic; }
+#server-image-output td { 
+	border-style: solid;
+	border-width: 1px;
+	border-color: #CCC #EEE;
+	padding: 0 0.5em;
+	line-height: 1.5em;
+	font-size: 1em;
+}
+#server-image-output td.col1 { padding: 0; }
+#server-image-output td.col2 a { width: 20em; height: 1.5em; overflow: hidden; display: block; }
+#server-image-output td.col3,
+#server-image-output td.col4,
+#server-image-output td.col5 { white-space: nowrap; text-align: center; }
+
+#image-upload input.upload-submit {
+	background-image: none;
+	background-position: 0 50%;
+	background-repeat: no-repeat;
+	padding-left: 0.5em;
+}
+
+#image-upload input.upload-submit.loading {
+	background-image: url(ajax-loader.gif);
+	padding-left: 20px;
+}

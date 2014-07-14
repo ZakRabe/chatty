@@ -1,0 +1,144 @@
+hr{
+	border-color: #000 !important;
+	margin-top: 0px;
+}
+#container{
+	min-width: 1050px;
+	max-width: 1080px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.speech{
+	position: relative;
+	width: 500px;
+	min-height: 220px;
+	background-color: #FFF;
+	padding-top: 07px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 80px;
+	border: none;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	
+}
+.error{
+	border-right-style: solid !important;
+	border-radius: 1px !important;
+	border-color: red !important;
+}
+#form{
+	padding-bottom: 20px; 
+}
+.speech.posted.alt{
+	background-color: #16a2af;
+}
+.speech.posted.alt:before{
+	border-color: #16a2af transparent transparent #16a2af;
+}
+
+.speech.posted{
+	background-color: #759fd3;
+	}
+.speech.posted:before{
+	border-color: #759fd3 transparent transparent #759fd3
+}
+.speech:before{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 25px;
+	bottom: -60px;
+	border: 30px solid;
+	border-color: #FFF transparent transparent #FFF;
+
+}
+.comment{
+	width: 496px;
+	max-width: 100%;
+	font-family:'Conv_Gotham-BookItalic',Sans-Serif;
+	border: none;
+	font-size: 17px;
+	color: #818181;
+	min-height: 130px;
+	margin: 0 0 10px 0;
+	}
+.comment.posted{
+	color: #000;
+	margin-left: 10px;
+	margin-top: 5px;
+}
+.identity.posted{
+	margin: 10px;
+	color: #FFF;
+}
+input{
+	width: 100%;
+	font-family: "Conv_Gotham-Book", Sans-Serif;
+	border: none;
+}
+.identity {
+	display: block;
+	font-family: "Conv_Gotham-Bold", Sans-Serif;
+	font-size: 28px;
+}
+.city{
+	font-family: "Conv_Gotham-Book", Sans-Serif;
+}
+.email {
+	width: 65%;
+	font-size: 18px;
+	color: #818181;
+}
+body {
+	margin-top: 20px;
+	background-image: url(../img/bg.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: 50% 0%;
+	background-color: #455761;
+
+}
+#logo {
+	width: 120px;
+	height: 120px;	
+	background-image: url(../img/logo.png);
+	margin-bottom: 50px;
+
+	margin-left: auto;
+	margin-right: auto;
+	}
+.replacement {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	background-repeat: no-repeat;
+}
+#headline {
+	width: 840px;
+	height: 290px;
+	background-image: url(../img/headline.png);
+	padding-bottom: 50px;
+}
+.center {
+	margin-left: auto;
+	margin-right: auto;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+header, a {
+	font-family:'Conv_Gotham-Bold',Sans-Serif;
+	text-align: center;
+	color: #FFF;
+	text-decoration: none;
+	font-size: 15px;
+}
+a:hover {
+	text-decoration: underline;
+}
