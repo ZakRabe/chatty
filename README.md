@@ -1,7 +1,3 @@
 # The Chatty Commuter
-###Main points: 
-##ajax comment submission
-##form validation
-##speech bubble animation
-
+Submit a comment, validate animate the comment.
 
